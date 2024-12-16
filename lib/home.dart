@@ -13,7 +13,8 @@ class _EmailUIState extends State<EmailUI> {
   final List<Map<String, String>> emails = [
     {
       'sender': 'bootcamp',
-      'subject': 'Notification from Free Data Engineering Bootcamp',
+      'subject':
+          'Notification from Free Data Engineering Bootcamp  fsdnfsjkdfsdfsdfsd dsfnsdjfls adfaifa',
       'date': '1:48 AM',
       'image': 'assets/beef.jpg',
     },
@@ -70,7 +71,9 @@ class _EmailUIState extends State<EmailUI> {
           children: [
             // Header Section
             Container(
-              margin: EdgeInsets.only(top: 16.0),
+              // margin: EdgeInsets.only(top: 2.0),
+              margin:
+                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
               decoration: BoxDecoration(
                 color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(30),
@@ -83,7 +86,9 @@ class _EmailUIState extends State<EmailUI> {
                 ],
               ),
               child: Container(
-                margin: const EdgeInsets.all(8.0),
+                // margin: const EdgeInsets.all(2.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
                 child: Row(
                   children: [
                     IconButton(
@@ -98,7 +103,7 @@ class _EmailUIState extends State<EmailUI> {
                     Expanded(
                       flex: 1,
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "Search in mail",
@@ -126,9 +131,9 @@ class _EmailUIState extends State<EmailUI> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(16.0),
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text('Inbox'),
                 ],
@@ -144,12 +149,14 @@ class _EmailUIState extends State<EmailUI> {
                   return Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 2.0,
-                      vertical: 16.0,
+                      vertical: 2.0,
                     ),
                     child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white60,
-                      ),
+                      // decoration: BoxDecoration(
+                      //   color: Colors.white60,
+                      // ),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 2.0, vertical: 2.0),
                       child: ListTile(
                         leading: CircleAvatar(
                           backgroundColor: Colors.white60,
@@ -176,10 +183,10 @@ class _EmailUIState extends State<EmailUI> {
                         ),
                         subtitle: Text(
                           email['subject']!,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
+                          // maxLines: 1,
+                          // overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 10,
                             color: Colors.black54,
                           ),
                         ),
@@ -197,7 +204,7 @@ class _EmailUIState extends State<EmailUI> {
                             SizedBox(height: 8),
                             Icon(
                               Icons.star_border,
-                              size: 20,
+                              size: 25,
                               color: Colors.grey,
                             ),
                           ],
